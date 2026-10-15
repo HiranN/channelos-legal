@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ChannelOS – Connecting…</title>
+<style>body{font:17px/1.6 system-ui,sans-serif;background:#111;color:#eee;max-width:640px;margin:0 auto;padding:48px 16px}a{color:#8ab4ff}</style>
+</head>
+<body>
+<h1>Connecting to ChannelOS…</h1>
+<p>Returning the authorization to the ChannelOS app running on this computer.</p>
+<p id="manual" hidden>If nothing happens, make sure ChannelOS is open and <a id="link" href="#">click here</a>.</p>
+<script>
+  // Retorno do login do TikTok: repassa o código para o ChannelOS local (o TikTok só aceita https no registro).
+  var target = "http://127.0.0.1:5174/callback/" + location.search;
+  document.getElementById("link").href = target;
+  document.getElementById("manual").hidden = false;
+  location.replace(target);
+</script>
+</body>
+</html>
